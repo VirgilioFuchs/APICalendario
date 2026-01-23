@@ -93,7 +93,7 @@ def list_events():
             row["feriado_fim"] = timedelta_convert(row.get("feriado_fim"))
 
         return rows
-    except Exception as e:
+    except Exception:
         raise HTTPException(status_code=500, detail="Error when fetch events")
     finally:
         cursor.close()
@@ -144,7 +144,7 @@ def create_event(event: EventIn):
         )
         row = cursor.fetchone()
         return row
-    except Exception as e:
+    except Exception:
         conn.rollback()
         raise HTTPException(status_code=500, detail="Error when create event")
     finally:
