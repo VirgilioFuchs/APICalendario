@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/e53cb038-a1cf-475a-99cd-bfd85bff6452/console.sql" value="e53cb038-a1cf-475a-99cd-bfd85bff6452" />
+    <file url="file://$PROJECT_DIR$/app/api/routes/routes.py" value="e53cb038-a1cf-475a-99cd-bfd85bff6452" />
+    <file url="file://$PROJECT_DIR$/app/main.py" value="e53cb038-a1cf-475a-99cd-bfd85bff6452" />
+    <file url="file://$PROJECT_DIR$/app/utils/converters.py" value="e53cb038-a1cf-475a-99cd-bfd85bff6452" />
+  </component>
+</project>
