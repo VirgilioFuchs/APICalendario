@@ -1,9 +1,9 @@
 import hashlib
 import json
-from fastapi import APIRouter, HTTPException, Request, Response, status
+from fastapi import APIRouter, HTTPException, Request, status
 from typing import List
 
-from starlette.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 
 from app.models.event import EventIn, EventOut
 from app.database import get_connection
@@ -60,8 +60,7 @@ async def get_events(
         client_etag = request.headers.get("if-none-match")
 
         if client_etag == etag:
-            return JSONResponse(
-                content=None,
+            return Response(
                 status_code=status.HTTP_304_NOT_MODIFIED,
                 headers={"ETag": etag}
             )
